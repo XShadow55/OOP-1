@@ -8,15 +8,17 @@ public class Main {
             hogwarts[i].printInfo();
         }
 //            hogwarts[0].equils(hogwarts[1]);
-        zd(hogwarts[0].getName(), hogwarts[1].getName(), hogwarts[0].getSum(), hogwarts[1].getSum());
+        zd(hogwarts[0],hogwarts[1]);
 
     }
 
-    public static void zd(String a1, String b1, int a, int b) {
-        if (a > b) {
-            System.out.println(a1 + " обладает бОльшей мощностью магии, чем " + b1);
+   public static void zd(Object a, Object b ) {
+        Hogwarts s = (Hogwarts) a;
+        Hogwarts s1 = (Hogwarts) b;
+        if (s.getSum() > s1.getSum()) {
+            System.out.println(s.getName() + " обладает бОльшей мощностью магии, чем " + s1.getName());
         } else {
-            System.out.println(b1 + " обладает бОльшей мощностью магии, чем " + a1);
+            System.out.println(s1.getName() + " обладает бОльшей мощностью магии, чем " + s.getName());
         }
 
     }
